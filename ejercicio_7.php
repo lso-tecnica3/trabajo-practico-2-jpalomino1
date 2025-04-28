@@ -46,8 +46,16 @@
                     print "<tr><td>Velocidad maxima permitida en el lugar: 120 km/h</td></tr>";
                     print "<tr><td>Velocidad detectada: $velocidad km/h</td></tr>";
                     print "<tr><td>AVISO DE PAGO VOLUNTARIO</td></tr>";
-                    print "<tr><td>Total a pagar:50.000 </td></tr>";
-                    print "<tr><td>Descuento:$15000 </td></tr>";
+                    if ( $velocidad>160){
+                        print "<tr><td>Total a pagar:100.000 </td></tr>";
+                        print "<tr><td>Descuento:$30.000</td></tr>";
+                    }
+                    else{
+                        print "<tr><td>Total a pagar:50.000 </td></tr>";
+                        print "<tr><td>Descuento:$15000 </td></tr>";
+                    }
+
+                    
                     $con=$con+1;
                     print "</table>";    
                 
